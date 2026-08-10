@@ -23,6 +23,126 @@
 
       gtag('config', 'G-0LY0HY7L01');
     </script>
+    <style>
+        /* Extra custom styles for pure image hero & new sections */
+        .hero-images-only {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 15px;
+            background: var(--white-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hero-img-item {
+            height: 580px;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        .hero-img-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .hero-img-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Material Palette Section */
+        .material-library {
+            padding: 100px 0;
+            background: var(--white-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        .material-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .material-card:hover {
+            border-color: var(--accent-coral);
+            transform: translateY(-3px);
+        }
+        .material-card h4 {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        .material-card p {
+            font-size: 14px;
+            margin: 0;
+            opacity: 0.8;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .testimonial-card {
+            background: var(--white-color);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 4px;
+            position: relative;
+        }
+        .testimonial-card p {
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        .testimonial-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+        .testimonial-author h5 {
+            font-family: var(--font-serif);
+            font-size: 16px;
+            color: var(--accent-color);
+            margin: 0;
+        }
+        .testimonial-author span {
+            font-size: 12px;
+            color: var(--accent-coral);
+            font-weight: 700;
+        }
+
+        @media (max-width: 992px) {
+            .hero-images-only {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .hero-img-item {
+                height: 350px;
+            }
+            .material-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -69,37 +189,22 @@
 	</header>
 	<!-- Header End -->
    
-    <!-- Fullscreen Offset Grid Hero Start (Image Section 1) -->
-    <section class="hero-offset-grid">
-        <!-- Col 1: Huge Left Image -->
-        <div class="hero-col-1" data-reveal="left">
-            <img src="assets/img/hero.jpg" alt="Modern luxury gourmet kitchen counter">
-            <div class="hero-floating-box">
-                <h3>Ergonomic Flow</h3>
-                <p>We configure kitchen cabinet clearance paths down to the millimeter to protect user movement speeds.</p>
-            </div>
+    <!-- Fullscreen Pure Image Hero Showcase Start (Image Section 1 - Text Removed) -->
+    <section class="hero-images-only">
+        <!-- Image 1 -->
+        <div class="hero-img-item" data-reveal="left">
+            <img src="assets/img/hero.jpg" alt="Modern luxury gourmet kitchen counter top">
         </div>
-        
-        <!-- Col 2: Title and Subtext Panel -->
-        <div class="hero-col-2" data-reveal="zoom">
-            <span>Kitchen Design Atelier</span>
-            <h1>Calibrating space for chefs</h1>
-            <p>We analyze oven exhaust volumes, marble baking slab temperatures, and cabinet pull thresholds to build beautiful, highly functional home kitchens.</p>
-            <div>
-                <a href="contact.html" class="btn-default">Book Atelier Plan</a>
-            </div>
+        <!-- Image 2 -->
+        <div class="hero-img-item" data-reveal="zoom">
+            <img src="assets/img/coll_1.jpg" alt="Stainless steel gas cooktop burner range">
         </div>
-        
-        <!-- Col 3: Right Stack -->
-        <div class="hero-col-3" data-reveal="right">
-            <img src="assets/img/coll_1.jpg" alt="Stainless steel gas cooktop burner close">
-            <div class="hero-solid-coral">
-                <h4 class="mb-2" style="font-family: var(--font-serif); font-size: 20px;">Atelier Logs</h4>
-                <p class="mb-0" style="font-size: 14px; opacity: 0.9;">Documented plans for home chefs.</p>
-            </div>
+        <!-- Image 3 -->
+        <div class="hero-img-item" data-reveal="right">
+            <img src="assets/img/coll_2.jpg" alt="Marble baking slab workstation island close-up">
         </div>
     </section>
-    <!-- Fullscreen Offset Grid Hero End -->
+    <!-- Fullscreen Pure Image Hero Showcase End -->
 
     <!-- Steps Timeline Section Start (Image Section 2) -->
     <section class="timeline-section">
@@ -149,6 +254,40 @@
     </section>
     <!-- Steps Timeline End -->
 
+    <!-- New Section A: The Material Palette Showcase Start -->
+    <section class="material-library">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span>Material Atelier</span>
+                <h2>Premium Kitchen Materials</h2>
+            </div>
+            
+            <div class="material-grid">
+                <!-- Material 1 -->
+                <div class="material-card" data-reveal="zoom">
+                    <h4>Calacatta Marble</h4>
+                    <p>Highly compact metamorphic rock selected for its thermal mass stability, ideal for rolling high-fat pastry doughs.</p>
+                </div>
+                <!-- Material 2 -->
+                <div class="material-card" data-reveal="zoom">
+                    <h4>Brushed Brass</h4>
+                    <p>Solid hardware finishes treated with anti-tarnish protective coatings to withstand grease splatters and cleaning rubs.</p>
+                </div>
+                <!-- Material 3 -->
+                <div class="material-card" data-reveal="zoom">
+                    <h4>Smoked Oak</h4>
+                    <p>Fume-darkened timber panels sealed with organic linseed oils to resist warping under high boil steam climates.</p>
+                </div>
+                <!-- Material 4 -->
+                <div class="material-card" data-reveal="zoom">
+                    <h4>Fluted Glass</h4>
+                    <p>Textured cabinet glass panes designed to distort interior utensil profiles while letting ambient tasks light pass.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New Section A End -->
+
     <!-- Premium Workstations Section Start (Image Section 3) -->
     <section class="workstations-section">
         <div class="container">
@@ -191,6 +330,44 @@
         </div>
     </section>
     <!-- Premium Workstations End -->
+
+    <!-- New Section B: Chef Testimonials & Workstation Reviews Start -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span>Client Validation</span>
+                <h2>Workstation Case Reviews</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Card 1 -->
+                <div class="testimonial-card" data-reveal="zoom">
+                    <p>"The Carrara marble dough counter stays at the perfect temperature even during long lamination shifts. Hinge clearances are incredibly smooth."</p>
+                    <div class="testimonial-author">
+                        <h5>Chef Jean-Louis</h5>
+                        <span>32m² Kitchen Draft</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="testimonial-card" data-reveal="zoom">
+                    <p>"Exhaust hood volumes are calculated perfectly. We cook with hot woks and deep frying pans, and there is zero lingering aroma in the dining hall."</p>
+                    <div class="testimonial-author">
+                        <h5>Marcus Sterling</h5>
+                        <span>45m² Kitchen Draft</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="testimonial-card" data-reveal="zoom">
+                    <p>"Solid oak drawers slide like silk under thirty kilograms of heavy copper pans. Soft-close tracks work without rail sags after a year of heavy use."</p>
+                    <div class="testimonial-author">
+                        <h5>Sarah Jenkins</h5>
+                        <span>24m² Kitchen Draft</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New Section B End -->
 
     <!-- Kitchen Analytics Section Start -->
     <section class="analytics-section">
